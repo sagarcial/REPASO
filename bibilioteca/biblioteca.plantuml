@@ -1,0 +1,44 @@
+@startuml
+class Biblioteca {
+    -listaRecursos
+    +agregarRecurso()
+    +buscarRecurso()
+    +EliminarRecurso()
+}
+
+
+
+class Recurso {
+    -titulo
+    -autor
+    -añoPublicacion
+    -Editorial/Productora
+    -Tema
+
+    +AgregarInformacion()
+    +ModificarInformacion()
+    +EliminarInformacion()
+}
+
+class Libro {
+
+}
+
+class Revista {
+
+}
+
+class Pelicula {
+    
+}
+
+class Documental {
+
+}
+
+Biblioteca "1" *-- "*" Recurso
+Recurso <|-- Libro
+Recurso <|-- Revista
+Recurso <|-- Pelicula
+Recurso <|-- Documental
+@enduml
